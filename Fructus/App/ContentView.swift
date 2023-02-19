@@ -16,8 +16,10 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List(fruits.shuffled()) { fruit in
-                FruitRowView(fruit: fruit)
-                    .padding(.vertical, 4)
+                NavigationLink(destination: FruitDetailView(fruit: fruit)) {
+                    FruitRowView(fruit: fruit)
+                        .padding(.vertical, 4)
+                }
             }
             Button(action: {
                 isOnboarding = true
