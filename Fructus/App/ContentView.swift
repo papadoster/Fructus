@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("isOnboarding") var isOnboarding: Bool = false
+    @State private var isShowingSettings: Bool = false
     
     var fruits: [Fruit] = fruitsData
     
@@ -29,6 +30,17 @@ struct ContentView: View {
                         .padding(.vertical, 4)
             })
             .navigationTitle("Fruits")
+            .toolbar {
+                Button {
+                    isShowingSettings = true
+                } label: {
+                    Image(systemName: "slider.horizontal.3")
+                }
+                .sheet(isPresented: $isShowingSettings) {
+                    SettingsView()
+                }
+
+            }
         }
     }
 }
