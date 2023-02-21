@@ -28,7 +28,7 @@ struct SettingsView: View {
                                 .scaledToFit()
                                 .frame(width: 80, height: 80)
                                 .cornerRadius(9)
-                            Text("More fruits are naturally low in fat, sodium and colories. None have cholesterol. Fruits are sources of many essential nutrients, including potassium, dietary fiber, vitamins, and much more.")
+                            Text("More and more fruits are naturally low in fat, sodium and colories. None have cholesterol. Fruits are sources of many essential nutrients, including potassium, dietary fiber, vitamins, and much more.")
                                 .font(.footnote)
                         }
                     } label: {
